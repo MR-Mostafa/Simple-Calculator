@@ -2,10 +2,16 @@
  ================== @font-face ==================
 */
 @font-face {
-  font-family: "digital-7";
+  font-family: "Technology";
   font-style: normal;
   font-weight: normal;
-  src: local('digital-7'), local('digital'), url('../fonts/digital-7/digital.woff') format('woff'), url('../fonts/digital-7/digital.ttf') format('truetype');
+  src: local('Technology'), local('Technology-Regular'), url('../fonts/Technology/Technology-Regular.woff') format('woff'), url('../fonts/Technology/Technology-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Technology";
+  font-style: normal;
+  font-weight: bold;
+  src: local('Technology'), local('Technology-Bold'), url('../fonts/Technology/Technology-Bold.woff') format('woff'), url('../fonts/Technology/Technology-Bold.ttf') format('truetype');
 }
 /*
  ================== Base ==================
@@ -56,9 +62,9 @@ dl {
   margin-bottom: 50px;
   background: #2F2F2F;
   border: 1px solid #262626;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   -webkit-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.7), 0px 0px 5px rgba(255, 255, 255, 0.25);
   -moz-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.7), 0px 0px 5px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.7), 0px 0px 5px rgba(255, 255, 255, 0.25);
@@ -67,47 +73,34 @@ dl {
  ====================== calculator ======================
 */
 #calculator {
-  padding: 12px 0;
+  padding: 20px 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-#calculator input {
-  font-family: 'digital-7', sans-serif, Tahoma, "Times New Roman", Arial;
+  font-family: 'Technology', sans-serif, Tahoma, "Times New Roman", Arial;
   font-weight: bold;
   line-height: normal;
 }
-#calculator #led-display {
-  width: 100%;
+/*
+ ====================== .LED ======================
+*/
+.LED {
+  overflow: hidden;
   background: #efefef;
-  cursor: default;
-  display: block;
-  padding: 60px 12px 10px;
-  font-size: 3.75rem;
-  letter-spacing: 2.5px;
-  color: transparent;
-  caret-color: #646464;
+  font-size: 3.8rem;
+  letter-spacing: 3px;
+  color: #434343;
   border: 3px solid #424142;
-  -webkit-border-radius: 22px;
-  -moz-border-radius: 22px;
-  border-radius: 22px;
+  line-height: normal;
+  padding: 70px 12px 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
   -moz-box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
   box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
-  text-shadow: 0 0 0 #454545, 0 1px 1px #fff;
 }
-#calculator #led-display::-moz-selection {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: transparent;
-}
-#calculator #led-display::selection {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: transparent;
+.LED #led-display {
+  background: transparent;
 }
