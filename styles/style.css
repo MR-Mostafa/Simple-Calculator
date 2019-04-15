@@ -135,4 +135,15 @@ dl {
   -webkit-box-shadow: inset -1.5px 0.5px 2px rgba(116, 116, 116, 0.72), inset 1.5px 0px 2px #1c1b1b, inset -0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
   -moz-box-shadow: inset -1.5px 0.5px 2px rgba(116, 116, 116, 0.72), inset 1.5px 0px 2px #1c1b1b, inset -0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
   box-shadow: inset -1.5px 0.5px 2px rgba(116, 116, 116, 0.72), inset 1.5px 0px 2px #1c1b1b, inset -0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  -webkit-transition: background, color 0.2s linear, box-shadow 0.1s ease;
+  -moz-transition: background, color 0.2s linear, box-shadow 0.1s ease;
+  -o-transition: background, color 0.2s linear, box-shadow 0.1s ease;
+  transition: background, color 0.2s linear, box-shadow 0.1s ease;
+}
+.buttons .calculator-btn:hover {
+  background: #5e5e5e;
+  color: rgba(233, 229, 225, 0.8);
+  /*background: #3b3b3b;
+            .box-shadow(inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;);
+            color: #3a3a3a;*/
 }
