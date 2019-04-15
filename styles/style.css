@@ -1,5 +1,5 @@
 /*
- ================== Base ==================
+ ================== @font-face ==================
 */
 @font-face {
   font-family: "sa-digital-number";
@@ -8,6 +8,15 @@
   src: url('../fonts/sa-digital-number/digital number.eot');
   src: local('sa-digital-number'), local('digital number'), url('../fonts/sa-digital-number/digital number.woff') format('woff'), url('../fonts/sa-digital-number/digital number.ttf') format('truetype'), url('../fonts/sa-digital-number/digital number.eot?#iefix') format('embedded-opentype'), url('../fonts/sa-digital-number/digital number.svg#digital number') format('svg');
 }
+/*
+ ================== Base ==================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+}
 body,
 html {
   min-height: 100%;
@@ -15,7 +24,59 @@ html {
 body {
   background: url('../image/bg.jpg') transparent center no-repeat;
   background-size: cover;
+  font-family: Tahoma, "Times New Roman", Arial, sans-serif !important;
+}
+input,
+a,
+span,
+button,
+textarea,
+strong,
+label {
+  display: inline-block;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline-offset: 0;
+}
+li {
+  list-style: none;
+}
+p,
+ul,
+ol,
+dl {
+  margin-bottom: 0;
 }
 /*
  ====================== mt-70 ======================
 */
+.mt-70 {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  background: #2F2F2F;
+  border: 1px solid #262626;
+  height: 400px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.7), 0px 0px 5px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.7), 0px 0px 5px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.7), 0px 0px 5px rgba(255, 255, 255, 0.25);
+}
+/*
+ ====================== calculator ======================
+*/
+#calculator {
+  padding: 12px;
+}
+#calculator input {
+  font-family: 'digital number', Tahoma, "Times New Roman", Arial, sans-serif !important;
+}
+#calculator #led-display {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  font-size: 2rem;
+}
