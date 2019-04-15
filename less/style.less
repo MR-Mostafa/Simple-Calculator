@@ -70,12 +70,18 @@ dl{
     }
     & #led-display{
         width: 100%;
-        background: #ededed;
+        background: #efefef;
+        cursor: default;
         display: block;
         padding: 60px 12px 10px;
-        font-size: 3.85rem;
+        font-size: 3.75rem;
         letter-spacing: 2.5px;
-        color: #393939;
+        color: transparent; // css trick for hide "text cursor" or "Text caret"
+        caret-color: transparent;
+        border: 3px solid #424142;
         .border-radius(22px);
+        .box-shadow(inset 0px 0px 3px#d5d6d8, 0px 0px 2px rgba(213,214,216,.2););
+        .text-shadow(0 0 0 #454545, 0 1px 1px #fff;);
+        .user-select(none);
     }
 }
