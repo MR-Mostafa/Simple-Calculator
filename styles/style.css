@@ -68,15 +68,22 @@ dl {
  ====================== calculator ======================
 */
 #calculator {
-  padding: 12px;
+  padding: 12px 5px;
 }
 #calculator input {
   font-family: 'digital-7', sans-serif, Tahoma, "Times New Roman", Arial;
   font-weight: bold;
+  line-height: normal;
 }
 #calculator #led-display {
   width: 100%;
+  background: #ededed;
   display: block;
-  padding: 15px;
-  font-size: 2rem;
+  padding: 60px 12px 10px;
+  font-size: 3.85rem;
+  letter-spacing: 2.5px;
+  color: #393939;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
 }
