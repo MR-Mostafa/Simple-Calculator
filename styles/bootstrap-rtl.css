@@ -1,16 +1,3 @@
-@font-face {
-	font-family: "IRANSans";
-	font-style: normal;
-	font-weight: normal;
-	src: url('../fonts/IRANSans/IRANSansWeb.eot');
-    src: local('IRANSans'),
-         local('IRANSansWeb'),
-         url('../fonts/IRANSans/IRANSansWeb.woff') format('woff'),
-         url('../fonts/IRANSans/IRANSansWeb.woff2') format('woff2'),
-         url('../fonts/IRANSans/IRANSansWeb.ttf') format('truetype'),
-         url('../fonts/IRANSans/IRANSansWeb.eot?#iefix') format('embedded-opentype');
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +7,7 @@
 body {
     direction: rtl;
     text-align: right;
-	font-family: 'IRANSans', Tahoma, "Times New Roman", Arial, sans-serif !important;
+	font-family: Tahoma, "Times New Roman", Arial, sans-serif !important;
 }
 input,
 a,
