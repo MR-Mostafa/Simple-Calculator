@@ -2,11 +2,10 @@
  ================== @font-face ==================
 */
 @font-face {
-  font-family: "sa-digital-number";
+  font-family: "digital-7";
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/sa-digital-number/digital number.eot');
-  src: local('sa-digital-number'), local('digital number'), url('../fonts/sa-digital-number/digital number.woff') format('woff'), url('../fonts/sa-digital-number/digital number.ttf') format('truetype'), url('../fonts/sa-digital-number/digital number.eot?#iefix') format('embedded-opentype'), url('../fonts/sa-digital-number/digital number.svg#digital number') format('svg');
+  src: local('digital-7'), local('digital'), url('../fonts/digital-7/digital.woff') format('woff'), url('../fonts/digital-7/digital.ttf') format('truetype');
 }
 /*
  ================== Base ==================
@@ -72,7 +71,8 @@ dl {
   padding: 12px;
 }
 #calculator input {
-  font-family: 'digital number', Tahoma, "Times New Roman", Arial, sans-serif !important;
+  font-family: 'digital-7', sans-serif, Tahoma, "Times New Roman", Arial;
+  font-weight: bold;
 }
 #calculator #led-display {
   width: 100%;
