@@ -1,6 +1,13 @@
 /*
  ================== Base ==================
 */
+@font-face {
+  font-family: "sa-digital-number";
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/sa-digital-number/digital number.eot');
+  src: local('sa-digital-number'), local('digital number'), url('../fonts/sa-digital-number/digital number.woff') format('woff'), url('../fonts/sa-digital-number/digital number.ttf') format('truetype'), url('../fonts/sa-digital-number/digital number.eot?#iefix') format('embedded-opentype'), url('../fonts/sa-digital-number/digital number.svg#digital number') format('svg');
+}
 body,
 html {
   min-height: 100%;
