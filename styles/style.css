@@ -56,7 +56,6 @@ dl {
   margin-bottom: 50px;
   background: #2F2F2F;
   border: 1px solid #262626;
-  height: 400px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -68,7 +67,11 @@ dl {
  ====================== calculator ======================
 */
 #calculator {
-  padding: 12px 5px;
+  padding: 12px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #calculator input {
   font-family: 'digital-7', sans-serif, Tahoma, "Times New Roman", Arial;
@@ -84,7 +87,7 @@ dl {
   font-size: 3.75rem;
   letter-spacing: 2.5px;
   color: transparent;
-  caret-color: transparent;
+  caret-color: #646464;
   border: 3px solid #424142;
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
@@ -93,8 +96,18 @@ dl {
   -moz-box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
   box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
   text-shadow: 0 0 0 #454545, 0 1px 1px #fff;
+}
+#calculator #led-display::-moz-selection {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: transparent;
+}
+#calculator #led-display::selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: transparent;
 }
