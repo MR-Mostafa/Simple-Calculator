@@ -3,8 +3,7 @@
 /*
  ================== @font-face ==================
 */
-.font-face("Technology", "Technology-Regular", normal, normal, "woff", Null, "ttf");
-.font-face("Technology", "Technology-Bold", normal, bold, "woff", Null, "ttf");
+.font-face("Technology", "Technology-Regular", normal, normal, "woff", Null, "ttf", "eot", "svg");
 /*
  ================== Base ==================
 */
@@ -65,8 +64,10 @@ dl{
     padding: 20px 5px;
     .user-select(none);
     font-family: 'Technology', sans-serif, Tahoma, "Times New Roman", Arial;
-    font-weight: bold;
+    font-weight: normal;
     line-height: normal;
+    letter-spacing: 4px;
+    font-size: 2rem;
 }
 
 
@@ -87,7 +88,7 @@ dl{
 
     & #led-display{
         background: transparent;
-        
+        font-weight: bold;
     }
 }
 
