@@ -66,7 +66,7 @@ dl{
     font-family: 'Technology', sans-serif, Tahoma, "Times New Roman", Arial;
     font-weight: normal;
     line-height: normal;
-    letter-spacing: 4px;
+    letter-spacing: 4.5px;
     font-size: 2rem;
 }
 
@@ -78,7 +78,6 @@ dl{
     overflow: hidden;
     background: #efefef;
     font-size: 3.8rem;
-    letter-spacing: 3px;
     color: #434343;
     border: 3px solid #424142;
     line-height: normal;
@@ -86,9 +85,9 @@ dl{
     .border-radius(10px);
     .box-shadow(inset 0px 0px 3px#d5d6d8, 0px 0px 2px rgba(213,214,216,.2););
 
-    & #led-display{
+    & #LED-display{
         background: transparent;
-        font-weight: bold;
+        .text-shadow(0 0px 1px #434343);
     }
 }
 
@@ -129,9 +128,23 @@ dl{
             color: #3a3a3a;*/
         }
 
-        &.divide{
-            .border-radius(22% 55% 22% 30%);
+        &#off{
+            .border-radius(55% 30% 22% 22%);
+            font-size: 1.6rem;
+            padding: 16px 0 6.4px 8px;
         }
+
+        &.Parentheses{
+            padding: 11.1px 0 8.1px;
+            font-size: 1.8rem;
+        }
+
+        &#divide{
+            .border-radius(22% 55% 22% 30%);
+            font-size: 2.5rem;
+            padding: 6.2px 0px 1px;
+        }
+        
 
     }
 }
