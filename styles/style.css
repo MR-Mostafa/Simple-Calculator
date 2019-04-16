@@ -115,14 +115,16 @@ dl {
   text-align: center;
   height: 300px;
 }
-.buttons .col-3 {
-  padding-right: 7px;
-  padding-left: 7px;
+.buttons .row:not(:first-child) {
+  padding-top: 15px;
+}
+.buttons .col {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .buttons .calculator-btn {
   display: block;
   cursor: pointer;
-  padding: 16px 8px;
   background: #505050;
   border: 1px solid rgba(0, 0, 0, 0.6);
   color: rgba(233, 229, 225, 0.6);
@@ -144,21 +146,32 @@ dl {
             .box-shadow(inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;);
             color: #3a3a3a;*/
 }
-.buttons .calculator-btn#off {
-  -webkit-border-radius: 55% 30% 22% 22%;
-  -moz-border-radius: 55% 30% 22% 22%;
-  border-radius: 55% 30% 22% 22%;
+.buttons .calculator-btn#square {
+  font-size: 2.3rem;
+  padding: 6.9px 0 1.5px 3px;
+}
+.buttons .calculator-btn#x2 {
   font-size: 1.6rem;
-  padding: 16px 0 6.4px 8px;
+  padding: 15px 0px 5.4px 8px;
+}
+.buttons .calculator-btn#x2 sup {
+  font-size: 1.1rem;
+  top: -0.7em;
+}
+.buttons .calculator-btn#off {
+  -webkit-border-radius: 55% 20% 20% 20%;
+  -moz-border-radius: 55% 20% 20% 20%;
+  border-radius: 55% 20% 20% 20%;
+  font-size: 1.4rem;
+  padding: 15.7px 0 7.9px 7px;
 }
 .buttons .calculator-btn.Parentheses {
-  padding: 11.1px 0 8.1px;
-  font-size: 1.8rem;
+  padding: 12px 0px 9.2px 4px;
+  font-size: 1.5rem;
 }
 .buttons .calculator-btn#divide {
-  -webkit-border-radius: 22% 55% 22% 30%;
-  -moz-border-radius: 22% 55% 22% 30%;
-  border-radius: 22% 55% 22% 30%;
-  font-size: 2.5rem;
-  padding: 6.2px 0px 1px;
+  -webkit-border-radius: 20% 55% 20% 20%;
+  -moz-border-radius: 20% 55% 20% 20%;
+  border-radius: 20% 55% 20% 20%;
+  padding: 10px 0 4px 4px;
 }

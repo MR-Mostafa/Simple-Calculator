@@ -103,15 +103,18 @@ dl{
     text-align: center;
     height: 300px;
 
-    & .col-3{
-        padding-right: 7px;
-        padding-left: 7px;
+    & .row:not(:first-child){
+        padding-top: 15px;
+    }
+
+    & .col{
+        padding-right: 5px;
+        padding-left: 5px;
     }
 
     & .calculator-btn{
         display: block;
         cursor: pointer;
-        padding: 16px 8px;
         background: #505050;
         border: 1px solid rgba(0,0,0,0.6);
         color: rgba(233, 229, 225, 0.6);
@@ -128,21 +131,33 @@ dl{
             color: #3a3a3a;*/
         }
 
-        &#off{
-            .border-radius(55% 30% 22% 22%);
+        &#square{
+            font-size: 2.3rem;
+            padding: 6.9px 0 1.5px 3px;
+        }
+        &#x2{
             font-size: 1.6rem;
-            padding: 16px 0 6.4px 8px;
+            padding: 15px 0px 5.4px 8px;
+
+            & sup{
+                font-size: 1.1rem;
+                top: -0.7em;
+            }
+        }
+        &#off{
+            .border-radius(55% 20% 20% 20%);
+            font-size: 1.4rem;
+            padding: 15.7px 0 7.9px 7px;
         }
 
         &.Parentheses{
-            padding: 11.1px 0 8.1px;
-            font-size: 1.8rem;
+            padding: 12px 0px 9.2px 4px;
+            font-size: 1.5rem;
         }
 
         &#divide{
-            .border-radius(22% 55% 22% 30%);
-            font-size: 2.5rem;
-            padding: 6.2px 0px 1px;
+            .border-radius(20% 55% 20% 20%);
+            padding: 10px 0 4px 4px;
         }
         
 
