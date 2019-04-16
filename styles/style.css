@@ -76,7 +76,7 @@ dl {
   font-family: 'Technology', sans-serif, Tahoma, "Times New Roman", Arial;
   font-weight: normal;
   line-height: normal;
-  letter-spacing: 4px;
+  letter-spacing: 4.5px;
   font-size: 2rem;
 }
 /*
@@ -86,7 +86,6 @@ dl {
   overflow: hidden;
   background: #efefef;
   font-size: 3.8rem;
-  letter-spacing: 3px;
   color: #434343;
   border: 3px solid #424142;
   line-height: normal;
@@ -98,9 +97,9 @@ dl {
   -moz-box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
   box-shadow: inset 0px 0px 3px #d5d6d8, 0px 0px 2px rgba(213, 214, 216, 0.2);
 }
-.LED #led-display {
+.LED #LED-display {
   background: transparent;
-  font-weight: bold;
+  text-shadow: 0 0px 1px #434343;
 }
 /*
  ====================== .buttons ======================
@@ -145,8 +144,21 @@ dl {
             .box-shadow(inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;);
             color: #3a3a3a;*/
 }
-.buttons .calculator-btn.divide {
+.buttons .calculator-btn#off {
+  -webkit-border-radius: 55% 30% 22% 22%;
+  -moz-border-radius: 55% 30% 22% 22%;
+  border-radius: 55% 30% 22% 22%;
+  font-size: 1.6rem;
+  padding: 16px 0 6.4px 8px;
+}
+.buttons .calculator-btn.Parentheses {
+  padding: 11.1px 0 8.1px;
+  font-size: 1.8rem;
+}
+.buttons .calculator-btn#divide {
   -webkit-border-radius: 22% 55% 22% 30%;
   -moz-border-radius: 22% 55% 22% 30%;
   border-radius: 22% 55% 22% 30%;
+  font-size: 2.5rem;
+  padding: 6.2px 0px 1px;
 }
