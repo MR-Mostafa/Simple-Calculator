@@ -5,13 +5,8 @@
   font-family: "Technology";
   font-style: normal;
   font-weight: normal;
-  src: local('Technology'), local('Technology-Regular'), url('../fonts/Technology/Technology-Regular.woff') format('woff'), url('../fonts/Technology/Technology-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: "Technology";
-  font-style: normal;
-  font-weight: bold;
-  src: local('Technology'), local('Technology-Bold'), url('../fonts/Technology/Technology-Bold.woff') format('woff'), url('../fonts/Technology/Technology-Bold.ttf') format('truetype');
+  src: url('../fonts/Technology/Technology-Regular.eot');
+  src: local('Technology'), local('Technology-Regular'), url('../fonts/Technology/Technology-Regular.woff') format('woff'), url('../fonts/Technology/Technology-Regular.ttf') format('truetype'), url('../fonts/Technology/Technology-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Technology/Technology-Regular.svg#Technology-Regular') format('svg');
 }
 /*
  ================== Base ==================
@@ -79,8 +74,10 @@ dl {
   -ms-user-select: none;
   user-select: none;
   font-family: 'Technology', sans-serif, Tahoma, "Times New Roman", Arial;
-  font-weight: bold;
+  font-weight: normal;
   line-height: normal;
+  letter-spacing: 4px;
+  font-size: 2rem;
 }
 /*
  ====================== .LED ======================
@@ -103,6 +100,7 @@ dl {
 }
 .LED #led-display {
   background: transparent;
+  font-weight: bold;
 }
 /*
  ====================== .buttons ======================
