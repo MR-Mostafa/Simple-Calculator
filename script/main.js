@@ -28,7 +28,7 @@ dis = document.querySelector('#LED-display');
 
         if(e.target.id == 'equal'){
             if(LED_displayVal[LED_displayVal.length - 1] == "+"){
-                LED_display.textContent = LED_displayVal.substring(0, LED_displayVal.length-1)
+                LED_display.textContent = LED_displayVal.slice(0, LED_displayVal.length-1)
             }
             //LED_display.textContent = LED_displayVal *1;
         }
