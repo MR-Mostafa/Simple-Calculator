@@ -88,6 +88,10 @@ dl{
     & #LED-display{
         background: transparent;
         .text-shadow(0 0px 1px #434343);
+        min-height: 77.6px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        cursor: grab;
     }
 }
 
@@ -161,7 +165,8 @@ dl{
             padding: 9px 0 5px 5px;
         }
 
-        &.numbers{
+        &.numbers,
+        &#equal{
             padding: 8px 0 6px 3px;
         }
 

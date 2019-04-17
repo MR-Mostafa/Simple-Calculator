@@ -100,6 +100,10 @@ dl {
 .LED #LED-display {
   background: transparent;
   text-shadow: 0 0px 1px #434343;
+  min-height: 77.6px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: grab;
 }
 /*
  ====================== .buttons ======================
@@ -174,7 +178,8 @@ dl {
 .buttons .calculator-btn#percentage {
   padding: 9px 0 5px 5px;
 }
-.buttons .calculator-btn.numbers {
+.buttons .calculator-btn.numbers,
+.buttons .calculator-btn#equal {
   padding: 8px 0 6px 3px;
 }
 .buttons .calculator-btn#multiplication {
