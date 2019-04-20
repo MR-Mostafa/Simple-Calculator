@@ -1,11 +1,12 @@
-dis = document.querySelector('#LED-display');
-
 (function(){
 
     var calculator, LED_display;
     calculator = window.calculator;
     LED_display = calculator.querySelector('#LED-display');
-    
+    split_num = {};
+    operator = /[+-/*]/;
+    number = /[0-9]/;
+
     
 
 
@@ -13,27 +14,32 @@ dis = document.querySelector('#LED-display');
         var event = e.target;
         LED_displayVal = LED_display.textContent;
         
-        if(e.target.classList.contains('numbers') == true){
+        if(event.classList.contains('numbers')){
             if(LED_display.textContent == "0"){
                 LED_display.textContent = '';
             }
-            LED_display.textContent += event.textContent*1;
+            LED_display.textContent += event.textContent;
         }
 
-        if(LED_displayVal[LED_displayVal.length - 1] != "+"){
-            if(e.target.id == 'plus'){
-                LED_display.textContent += '+';
+        if(event.classList.contains('operator')){
+            if(operator.test(LED_displayVal[LED_displayVal.length - 1])){
+                LED_display.textContent = LED_displayVal.slice(0, LED_displayVal.length-1);
             }
+            LED_display.textContent += event.textContent;
         }
+    
 
-        if(e.target.id == 'equal'){
-            if(LED_displayVal[LED_displayVal.length - 1] == "+"){
+
+        if(event.id == 'equal'){
+            /*if(LED_displayVal[LED_displayVal.length - 1] == "+"){
                 LED_display.textContent = LED_displayVal.slice(0, LED_displayVal.length-1)
             }
-            //LED_display.textContent = LED_displayVal *1;
+            split_num.plus = LED_display.textContent.split("+");
+            split_num.minus = LED_display.textContent.split("-");*/
+            LED_display.textContent = eval(LED_display.textContent);
         }
         
-        console.log(LED_displayVal.length);
+        //console.log(split_num);
         
         
     }
