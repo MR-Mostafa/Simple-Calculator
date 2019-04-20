@@ -90,6 +90,7 @@ dl {
   border: 3px solid #424142;
   line-height: normal;
   padding: 15px 12px 5px;
+  white-space: nowrap;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -109,7 +110,6 @@ dl {
   overflow-x: scroll;
   overflow-y: hidden;
   cursor: grab;
-  white-space: nowrap;
 }
 /*
  ====================== .buttons ======================
