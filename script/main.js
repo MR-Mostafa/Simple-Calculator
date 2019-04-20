@@ -3,7 +3,6 @@
     var calculator, LED_display;
     calculator = window.calculator;
     LED_display = calculator.querySelector('#LED-display');
-    split_num = {};
     operator = /[+-/*]/;
     number = /[0-9]/;
 
@@ -31,16 +30,9 @@
 
 
         if(event.id == 'equal'){
-            /*if(LED_displayVal[LED_displayVal.length - 1] == "+"){
-                LED_display.textContent = LED_displayVal.slice(0, LED_displayVal.length-1)
-            }
-            split_num.plus = LED_display.textContent.split("+");
-            split_num.minus = LED_display.textContent.split("-");*/
             LED_display.textContent = eval(LED_display.textContent);
         }
-        
-        //console.log(split_num);
-        
+                
         
     }
 
