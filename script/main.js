@@ -56,8 +56,8 @@ function btn_number(e){
                     logDisplay = numSplit[0] + '%=' + result;
                     LED_display.textContent = eval(numSplitSecond[0] +  whichOperand + result);
                 }else{
-                    logDisplay = numSplit[0] + '%=' + +result.toFixed(3);
-                    LED_display.textContent = +eval(numSplitSecond[0] +  whichOperand + result).toFixed(3);
+                    logDisplay = numSplit[0] + '%=' + +result.toFixed(4);
+                    LED_display.textContent = +eval(numSplitSecond[0] +  whichOperand + result).toFixed(4);
                 }
                 
             }
@@ -78,7 +78,7 @@ function btn_number(e){
         if(result % 1 == 0){
             LED_display.textContent = +result;
         }else{
-            LED_display.textContent = +result.toFixed(3);
+            LED_display.textContent = +result.toFixed(4);
         }
     }
             
