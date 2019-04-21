@@ -5,7 +5,7 @@
     LED_display = calculator.querySelector('#LED-display');
     log = window.log;
     secendOperand = false;
-    operator = /[%+-/*]/;
+    operator = /[+-/*]/;
     //number = /[0-9]/;
 
     
@@ -33,26 +33,34 @@ function btn_number(e){
         }
         secendOperand = true;
 
-        LED_display.textContent += event.textContent;
+        if(event.id != 'percentage') LED_display.textContent += event.textContent;
 
         if(event.id == 'percentage'){
             var numSplit, numSplitSecond, result, whichOperand;
             numSplit = LED_display.textContent.split(/[%]/);
             numSplitSecond = LED_display.textContent.split(/[+*\-\/%]/);
-           
-            if (/[+]/.test(numSplit[0])) whichOperand = '+';
-            if (/[-]/.test(numSplit[0])) whichOperand = '-';
-            if (/[/]/.test(numSplit[0])) whichOperand = '/';
-            if (/[*]/.test(numSplit[0])) whichOperand = '*';
+            if(numSplitSecond.length >= 2){
+                LED_display.textContent += event.textContent;
+                if (/[+]/.test(numSplit[0])) whichOperand = '+';
+                if (/[-]/.test(numSplit[0])) whichOperand = '-';
+                if (/[/]/.test(numSplit[0])) whichOperand = '/';
+                if (/[*]/.test(numSplit[0])) whichOperand = '*';
 
-            if(whichOperand == '/'){
-                result = ((Number(numSplitSecond[1])/100));
-            }else{
-                result = ((Number(numSplitSecond[1])/100))*Number(numSplitSecond[0]);
+                if(whichOperand == '/'){
+                    result = ((Number(numSplitSecond[1])/100));
+                }else{
+                    result = ((Number(numSplitSecond[1])/100))*Number(numSplitSecond[0]);
+                }
+
+                if(result % 1 == 0){
+                    logDisplay = numSplit[0] + '%=' + result;
+                    LED_display.textContent = eval(numSplitSecond[0] +  whichOperand + result);
+                }else{
+                    logDisplay = numSplit[0] + '%=' + +result.toFixed(3);
+                    LED_display.textContent = +eval(numSplitSecond[0] +  whichOperand + result).toFixed(3);
+                }
+                
             }
-
-            logDisplay = numSplit[0] + '%=' + result;
-            LED_display.textContent = eval(numSplitSecond[0] +  whichOperand + result);
         }
 
         
@@ -66,7 +74,12 @@ function btn_number(e){
     
     LED_displayVal = LED_display.textContent;
     if(event.id == 'equal'){
-        LED_display.textContent = eval(LED_display.textContent);
+        var result = eval(LED_display.textContent);
+        if(result % 1 == 0){
+            LED_display.textContent = +result;
+        }else{
+            LED_display.textContent = +result.toFixed(3);
+        }
     }
             
     
