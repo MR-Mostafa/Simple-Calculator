@@ -27,6 +27,7 @@ var splitWithOperator = () => {
 };
 var update = () => {
     display.textContent = cal.displayValue;
+<<<<<<< HEAD
 };
 
 var showResult = () => {
@@ -73,6 +74,21 @@ var showResult = () => {
 
         console.log( cal.percentageResult);
         
+=======
+}
+function showResult(){
+    if( cal.splitWithOperator().length >= 2 && /[-+*/%]/.test(cal.getLastCharacter()) == false ){
+        // Calculates value
+        cal.result = eval(cal.displayValue);
+        // show log
+        log.textContent = cal.displayValue + '=';
+        // reset cal.displayValue
+        cal.displayValue = cal.result;
+        //show cal.result
+        // the addition sign before the variable name, is deleted extra zeros in decimal number
+        // Ex: 12/5 before adding a plus sign is equal to 2.40000 BUT after adding a plus sign is equal 2.4
+        display.textContent = +cal.result.toFixed(cal.numberOfDecimal);
+>>>>>>> parent of acdf08d... fix percentage error :blush:
     }
 
 };
@@ -102,7 +118,34 @@ function btn_number(e){
     } // if operator
 
 
+<<<<<<< HEAD
     if(event.id == 'percentage'){
+=======
+            if(cal.whichOperator() == '/'){
+                cal.resultPersent = Number(cal.splitWithOperator()[1])/100;
+            }else{
+                cal.resultPersent = (Number(cal.splitWithOperator()[1])/100)*Number(cal.splitWithOperator()[0]);
+            }
+            console.log(cal.splitWithOperator());
+            // show log
+            log.textContent = cal.displayValue + '=' + +cal.resultPersent.toFixed(cal.numberOfDecimal);
+
+            if(cal.whichOperator() == '/') cal.result = Number(cal.splitWithOperator()[0]) / Number(cal.resultPersent);
+            if(cal.whichOperator() == '*') cal.result = Number(cal.splitWithOperator()[0]) * Number(cal.resultPersent);
+            if(cal.whichOperator() == '+') cal.result = Number(cal.splitWithOperator()[0]) + Number(cal.resultPersent);
+            if(cal.whichOperator() == '-') cal.result = Number(cal.splitWithOperator()[0]) - Number(cal.resultPersent);
+            
+            //console.log(cal.whichOperator());
+            //console.log(cal.splitWithOperator());
+            // reset cal.displayValue
+            cal.displayValue = cal.result;
+            //show cal.result
+            // the addition sign before the variable name, is deleted extra zeros in decimal number
+            // Ex: 12/5 before adding a plus sign is equal to 2.40000 BUT after adding a plus sign is equal 2.4
+            display.textContent = +cal.result.toFixed(cal.numberOfDecimal);
+            
+        }
+>>>>>>> parent of acdf08d... fix percentage error :blush:
         
         // اگر آخرین کاراکتر عبارت های زیر نبود، علامت درصد رو اضافه می‌کنه
         if(!/[\-\+\*/%]/.test(getLastCharacter())){
