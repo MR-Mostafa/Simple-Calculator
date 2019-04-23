@@ -24,7 +24,10 @@
                 if (/[/]/.test(this.displayValue)) return '/';
                 if (/[*]/.test(this.displayValue)) return '*';
                 return false;
-            }
+            },
+        lastEntry : function(){
+                return this.splitWithOperator()[this.splitWithOperator().length-1];
+            },
     }
     
 
@@ -153,8 +156,14 @@ function btn_number(e){
     }
 
     if(event.id == 'plus-minus'){
-        var plus_minus = cal.displayValue * -1;
-        cal.displayValue = plus_minus.toString();
+        var plus_minus;
+        if(cal.splitWithOperator().length == 1){
+            plus_minus = (Number(cal.displayValue) * -1).toString();
+            cal.displayValue = plus_minus;
+        }else{
+            plus_minus = '(' + (Number(cal.lastEntry()) * -1).toString() + ')';
+            cal.displayValue = cal.displayValue.replace(cal.lastEntry(), plus_minus);
+        }
         update();
     }
 
@@ -165,11 +174,10 @@ function btn_number(e){
     }
 
     if(event.id == 'ce'){
-        var lastEntry = cal.splitWithOperator()[cal.splitWithOperator().length-1];
         if(cal.splitWithOperator().length == 1){
             cal.displayValue = '0';
         }else{
-            cal.displayValue = cal.displayValue.replace(lastEntry, '');
+            cal.displayValue = cal.displayValue.replace(cal.lastEntry(), '');
         }
         update();
     }
