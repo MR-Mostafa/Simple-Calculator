@@ -114,8 +114,7 @@ function btn_number(e){
 
    
     if(event.classList.contains('Parentheses')){
-        
-
+        alert('Not done yet');
     } // if Parentheses
 
     if(event.id == 'equal'){
