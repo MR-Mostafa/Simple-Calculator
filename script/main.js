@@ -11,7 +11,7 @@
         resultPersent    : null,
         numberOfDecimal  : 5,
         getLastCharacter : function(){
-                return cal.displayValue[cal.displayValue.length-1];
+                return this.displayValue[this.displayValue.length-1];
             },
         splitWithOperator : function(){
                 // filter(Boolean) remove falsy items in arr
@@ -126,7 +126,7 @@ function btn_number(e){
         if(square.toString().indexOf('e') != -1){
             cal.displayValue = +square.toFixed(cal.numberOfDecimal);
         }else{
-            cal.displayValue = square;
+            cal.displayValue = square.toString();
         }
         update();
     }
@@ -134,7 +134,7 @@ function btn_number(e){
     if(event.id == 'x2'){
         var x2 = eval(cal.displayValue);
         log.textContent = x2 + '^' + x2 + '=';
-        x2 = Number(x2) * Number(x2);
+        x2 = x2 * x2;
         if(x2.toString().indexOf('e') != -1){
             cal.displayValue = +x2.toFixed(cal.numberOfDecimal);
         }else{
