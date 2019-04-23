@@ -127,9 +127,20 @@ function btn_number(e){
 
     if(event.id == 'x2'){
         var x2 = eval(cal.displayValue);
-        log.textContent = 'sqr(' + x2 +  ')=';
+        console.log(x2);
+        log.textContent = x2 + '^' + x2 + '=';
         x2 = Math.pow(x2,x2);
-        cal.displayValue = +x2.toFixed(cal.numberOfDecimal);
+        console.log(x2);
+        if(x2.toString().indexOf('e') != -1){
+            cal.displayValue = +x2.toFixed(cal.numberOfDecimal);
+        }else{
+            cal.displayValue = x2;
+        }
+        update();
+    }
+
+    if(event.id == 'plus-minus'){
+        cal.displayValue = cal.displayValue * -1;
         update();
     }
 
