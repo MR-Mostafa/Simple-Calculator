@@ -117,6 +117,14 @@ function btn_number(e){
         alert('Not done yet');
     } // if Parentheses
 
+    if(event.id == 'square'){
+        var square = eval(cal.displayValue);
+        log.innerHTML = '&#xe901;(' + square + ')=';
+        square = Math.sqrt(square);
+        cal.displayValue = +square.toFixed(cal.numberOfDecimal);
+        update();
+    }
+
     if(event.id == 'equal'){
         showResult();
     } // if equal
