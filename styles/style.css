@@ -151,9 +151,13 @@ dl {
 .buttons .calculator-btn:hover {
   background: #5e5e5e;
   color: rgba(233, 229, 225, 0.8);
-  /*background: #3b3b3b;
-            .box-shadow(inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;);
-            color: #3a3a3a;*/
+}
+.buttons .calculator-btn:active {
+  background: #3b3b3b;
+  -webkit-box-shadow: inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  -moz-box-shadow: inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  box-shadow: inset 86.5px 0px 2px #1c1b1b, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  color: #3a3a3a;
 }
 .buttons .calculator-btn#x2 {
   font-size: 1.6rem;
@@ -222,9 +226,14 @@ dl {
 .buttons .last-row #c:hover,
 .buttons .last-row #ce:hover {
   background: #cb1212;
-  /*background: #690000;
-                .box-shadow(inset 86.5px 0px 2px #400000, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;);
-                color: #3a3a3a;*/
+}
+.buttons .last-row #c:active,
+.buttons .last-row #ce:active {
+  background: #690000;
+  -webkit-box-shadow: inset 86.5px 0px 2px #400000, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  -moz-box-shadow: inset 86.5px 0px 2px #400000, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  box-shadow: inset 86.5px 0px 2px #400000, inset 0.5px -2px 2px #1c1b1b, 0 0 7px #191919;
+  color: #3a3a3a;
 }
 .buttons .last-row #dot {
   font-size: 3.5rem;
