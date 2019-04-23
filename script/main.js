@@ -134,11 +134,11 @@ function btn_number(e){
     if(event.id == 'x2'){
         var x2 = eval(cal.displayValue);
         log.textContent = x2 + '^' + x2 + '=';
-        x2 = x2 * x2;
+        x2 = Number(x2) * Number(x2);
         if(x2.toString().indexOf('e') != -1){
             cal.displayValue = +x2.toFixed(cal.numberOfDecimal);
         }else{
-            cal.displayValue = x2;
+            cal.displayValue = x2.toString();
         }
         update();
     }
@@ -169,7 +169,7 @@ function btn_number(e){
         log.textContent = '0';
         update();
     }
-
+    console.log(cal.splitWithOperator());
     if(event.id == 'ce'){
         if(cal.splitWithOperator().length == 1){
             cal.displayValue = '0';
