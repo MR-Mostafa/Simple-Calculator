@@ -125,6 +125,14 @@ function btn_number(e){
         update();
     }
 
+    if(event.id == 'x2'){
+        var x2 = eval(cal.displayValue);
+        log.textContent = 'sqr(' + x2 +  ')=';
+        x2 = Math.pow(x2,x2);
+        cal.displayValue = +x2.toFixed(cal.numberOfDecimal);
+        update();
+    }
+
     if(event.id == 'equal'){
         showResult();
     } // if equal
