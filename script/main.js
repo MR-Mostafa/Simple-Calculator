@@ -91,8 +91,7 @@ function btn_number(e){
             if(cal.whichOperator() == '+') cal.result = Number(cal.splitWithOperator()[0]) + Number(cal.resultPersent);
             if(cal.whichOperator() == '-') cal.result = Number(cal.splitWithOperator()[0]) - Number(cal.resultPersent);
             
-            //console.log(cal.whichOperator());
-            //console.log(cal.splitWithOperator());
+
             // reset cal.displayValue
             cal.displayValue = cal.result.toString();
             //show cal.result
@@ -134,10 +133,8 @@ function btn_number(e){
 
     if(event.id == 'x2'){
         var x2 = eval(cal.displayValue);
-        console.log(x2);
         log.textContent = x2 + '^' + x2 + '=';
-        x2 = Math.pow(x2,x2);
-        console.log(x2);
+        x2 = x2 * x2;
         if(x2.toString().indexOf('e') != -1){
             cal.displayValue = +x2.toFixed(cal.numberOfDecimal);
         }else{
