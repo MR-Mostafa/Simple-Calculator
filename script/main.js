@@ -164,7 +164,15 @@ function btn_number(e){
         update();
     }
 
-    
+    if(event.id == 'ce'){
+        var lastEntry = cal.splitWithOperator()[cal.splitWithOperator().length-1];
+        if(cal.splitWithOperator().length == 1){
+            cal.displayValue = '0';
+        }else{
+            cal.displayValue = cal.displayValue.replace(lastEntry, '');
+        }
+        update();
+    }
 
     if(event.id == 'equal'){
         showResult();
