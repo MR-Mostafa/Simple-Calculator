@@ -121,7 +121,11 @@ function btn_number(e){
         var square = eval(cal.displayValue);
         log.innerHTML = '&#xe901;(' + square + ')=';
         square = Math.sqrt(square);
-        cal.displayValue = +square.toFixed(cal.numberOfDecimal);
+        if(square.toString().indexOf('e') != -1){
+            cal.displayValue = +square.toFixed(cal.numberOfDecimal);
+        }else{
+            cal.displayValue = square;
+        }
         update();
     }
 
