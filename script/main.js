@@ -74,7 +74,7 @@ function btn_number(e){
             cal.displayValue += event.textContent;
             update();
 
-            if(cal.whichOperator() == '/'){
+            if(cal.whichOperator() == '/' || cal.whichOperator() == '*'){
                 cal.resultPersent = Number(cal.splitWithOperator()[1])/100;
             }else{
                 cal.resultPersent = (Number(cal.splitWithOperator()[1])/100)*Number(cal.splitWithOperator()[0]);
