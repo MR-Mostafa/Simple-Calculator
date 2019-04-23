@@ -143,10 +143,28 @@ function btn_number(e){
         update();
     }
 
+    if(event.id == 'dot'){
+        for(var i = 0; i < cal.splitWithOperator().length; i++){
+           if(cal.splitWithOperator()[i].indexOf('.') == -1){
+                cal.displayValue = cal.displayValue + '.';
+                update();
+           }
+        }
+    }
+
     if(event.id == 'plus-minus'){
-        cal.displayValue = cal.displayValue * -1;
+        var plus_minus = cal.displayValue * -1;
+        cal.displayValue = plus_minus.toString();
         update();
     }
+
+    if(event.id == 'c'){
+        cal.displayValue = '0';
+        log.textContent = '0';
+        update();
+    }
+
+    
 
     if(event.id == 'equal'){
         showResult();
