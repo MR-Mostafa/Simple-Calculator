@@ -38,7 +38,7 @@ function showResult(){
         // show log
         log.textContent = cal.displayValue + '=';
         // reset cal.displayValue
-        cal.displayValue = cal.result + '';
+        cal.displayValue = cal.result;
         //show cal.result
         // the addition sign before the variable name, is deleted extra zeros in decimal number
         // Ex: 12/5 before adding a plus sign is equal to 2.40000 BUT after adding a plus sign is equal 2.4
@@ -91,7 +91,7 @@ function btn_number(e){
             //console.log(cal.whichOperator());
             //console.log(cal.splitWithOperator());
             // reset cal.displayValue
-            cal.displayValue = cal.result + "";
+            cal.displayValue = cal.result;
             //show cal.result
             // the addition sign before the variable name, is deleted extra zeros in decimal number
             // Ex: 12/5 before adding a plus sign is equal to 2.40000 BUT after adding a plus sign is equal 2.4
