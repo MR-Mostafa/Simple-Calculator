@@ -154,6 +154,7 @@ function btn_number(e){
 
     if(event.id == 'plus-minus'){
         var plus_minus;
+        if(cal.displayValue == "0") cal.displayValue = '-';
         if(cal.splitWithOperator().length == 1){
             plus_minus = (Number(cal.displayValue) * -1).toString();
             cal.displayValue = plus_minus;
